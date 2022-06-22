@@ -19,7 +19,7 @@ EVEN = "even"
 PRIME = "prime"
 
 def is_prime(number):
-    if number == 0:
+    if number == 0 or number == 1:
         return False
     k = 0
     for i in range(2, number // 2 + 1):
@@ -50,4 +50,7 @@ def filter_numbers(numbers, filter_type):
     if filter_type == PRIME:
         return (list(filter(is_prime, numbers)))
 
-print(filter_numbers([0,1,2,3,4,5,6,7,8,9,10,11], PRIME))
+#numbers = [1,2,3,4,5]
+#print("ODD numbers is: ", filter_numbers(numbers, ODD))
+#print("EVEN numbers is: ", filter_numbers(numbers, EVEN))
+#print("PRIME numbers is: ", filter_numbers(numbers, PRIME))
