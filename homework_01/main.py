@@ -49,8 +49,3 @@ def filter_numbers(numbers, filter_type):
 
     if filter_type == PRIME:
         return (list(filter(is_prime, numbers)))
-
-#numbers = [1,2,3,4,5]
-#print("ODD numbers is: ", filter_numbers(numbers, ODD))
-#print("EVEN numbers is: ", filter_numbers(numbers, EVEN))
-#print("PRIME numbers is: ", filter_numbers(numbers, PRIME))
