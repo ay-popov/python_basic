@@ -43,10 +43,13 @@ def filter_numbers(numbers, filter_type):
     """
 
     if filter_type == ODD:
-        return (list(filter(lambda x: x % 2 == 1, numbers)))
+        #return (list(filter(lambda x: x % 2 == 1, numbers)))
+        return [number for number in numbers if number % 2 == 1]
 
     if filter_type == EVEN:
-        return (list(filter(lambda x: x % 2 == 0, numbers)))
+        #return (list(filter(lambda x: x % 2 == 0, numbers)))
+        return [number for number in numbers if number % 2 == 0]
 
     if filter_type == PRIME:
-        return (list(filter(is_prime, numbers)))
+        #return (list(filter(is_prime, numbers)))
+        return [number for number in numbers if is_prime(number)]
