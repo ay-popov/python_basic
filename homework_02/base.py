@@ -25,7 +25,6 @@ class Vehicle(ABC):
          else:
              raise NotEnoughFuel("Not enough fuel")
 
-
 # if __name__ == "__main__":
 #      vehicle = Vehicle(1,3,1)
 #      vehicle.move(3)
