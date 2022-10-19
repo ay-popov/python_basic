@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  {% if products %}
+    <h3>List of Items:</h3>
+    <ul class="list-group">
+
+
+      {% for product in products %}
+        <li class="list-group-item">
+        {{ product.name }}
+
+          <a class="text-decoration-none m-2"
+             href="{{ url_for('delete_page', product_id=product.id) }}">
+            Delete
+          </a>
+
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h1>Items does not exist in DB</h1>
+  {% endif %}
+
+{% endblock %}
