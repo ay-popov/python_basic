@@ -1,0 +1,22 @@
+{% extends "employees/base.html" %}
+
+{% block title %}
+    Сотрудники
+{% endblock %}
+
+{% block body %}
+    <div class="my-2">
+    <h3>Сотрудники</h3>
+    <div>
+
+    <div>
+       <ul class="list-group">
+           {% for empl in employees %}
+               <li class="list-group-item">
+{#                <a href="{% url 'employees:details' empl.pk %}">{{ empl.name }}</a>#}
+                   {{ empl.surname }} {{ empl.firstname }} ({{ empl.job }})
+               </li>
+           {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
