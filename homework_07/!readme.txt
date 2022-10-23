@@ -12,7 +12,7 @@ python manage.py runserver
 
 
 3. Реализованные сущности: JobTitles(должность), Employee(сотрудник), Order(наряд)
-админка		http://127.0.0.1:8000/admin/
+админка		http://127.0.0.1:8000/admin/        (admin 123456)
 сотрудники	http://127.0.0.1:8000/employees/
 наряды		http://127.0.0.1:8000/orders/
 
