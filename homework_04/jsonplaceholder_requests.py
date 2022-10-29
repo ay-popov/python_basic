@@ -25,4 +25,3 @@ async def fetch_posts_data() -> list[dict]:
         data: dict = await fetch_json(session, POSTS_DATA_URL)
         return data
 
-

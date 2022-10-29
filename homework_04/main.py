@@ -1,6 +1,6 @@
 import asyncio
 from loguru import logger
-from models import (
+from .models import (
     Base,
     async_engine,
     Session as async_session,
