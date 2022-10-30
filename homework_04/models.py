@@ -30,6 +30,8 @@ PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://
 
 
 class Base:
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+
     @declared_attr
     def __tablename__(cls):
         return f'{cls.__name__.lower()}s'
@@ -42,7 +44,6 @@ Base = declarative_base(cls=Base)
 
 
 class User(Base):
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
     name = Column(String(40), unique=False, nullable=False)
     username = Column(String(20), unique=True, nullable=False)
     email = Column(String(60), unique=True, nullable=False)
@@ -57,7 +58,6 @@ class User(Base):
 
 
 class Post(Base):
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
     title = Column(String(200), unique=False, nullable=False)
     body = Column(Text, nullable=False, default='Empty')
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
